@@ -9,7 +9,7 @@ description = "Thin client for the agent_utils Extensions MCP server - exact mat
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-authors = [{ name = "AI Cortex LLC" }]
+authors = [{ name = "AI Cortex LLC", email = "support@agent-utils.ai" }]
 keywords = ["mcp", "model-context-protocol", "ai-agents", "math", "unit-conversion", "claude", "agent-utils"]
 classifiers = [
     "Development Status :: 4 - Beta",
