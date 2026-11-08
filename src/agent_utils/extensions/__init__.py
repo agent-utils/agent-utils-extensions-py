@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: MIT
 """Thin MCP-over-HTTP client for the hosted agent_utils Extensions server.
 
-Extensions is the stateless half of agent_utils: exact math, unit conversion
-(general, electrical, chemistry, thermodynamics) and currency conversion, all on
-one endpoint.
+Extensions is the stateless half of agent_utils: exact math and unit
+conversion (general, electrical, chemistry, thermodynamics), all on one endpoint.
 
 This is a client, not the service - see https://agent-utils.ai.
 Zero dependencies: standard library only.
@@ -62,13 +61,6 @@ class AgentUtilsExtensions:
         """Convert `amount` between units of `quantity` (e.g. "length", "electric_potential")."""
         return self.call("convert_" + quantity, {"from": from_unit, "to": to_unit, "amount": amount})
 
-    def convert_currency(self, from_currency: str, to_currency: str, amount: float) -> Any:
-        """Convert `amount` between ISO 4217 currencies at the latest ECB reference rate."""
-        return self.call("convert_currency", {"from": from_currency, "to": to_currency, "amount": amount})
-
-    def list_currencies(self) -> Any:
-        return self.call("list_currencies", {})
-
     # --- account (also on swarm) ---------------------------------------------
 
     def get_account(self) -> Any:
@@ -94,3 +86,6 @@ class AgentUtilsExtensions:
 
     def submit_exit_feedback(self, **kwargs: Any) -> Any:
         return self.call("submit_exit_feedback", kwargs)
+
+    def delete_account(self, **kwargs: Any) -> Any:
+        return self.call("delete_account", kwargs)
