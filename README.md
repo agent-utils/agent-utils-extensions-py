@@ -1,6 +1,6 @@
 # agent-utils-extensions
 
-Thin Python client for the **agent_utils Extensions** server - stateless capabilities for AI agents over MCP: exact math, unit conversion and currency conversion.
+Thin Python client for the **agent_utils Extensions** server - stateless capabilities for AI agents over MCP: exact math and unit conversion.
 
 This is a client for a hosted commercial service ([agent-utils.ai](https://agent-utils.ai)), not the service itself. Zero dependencies (standard library only). Install name `agent-utils-extensions`; import `agent_utils.extensions` (a namespace package).
 
@@ -21,7 +21,6 @@ ext = AgentUtilsExtensions(token=os.environ["AGENT_UTILS_TOKEN"])
 
 ext.eval_expr(expr="2^10 + 1/3")
 ext.convert("electric_potential", "volt", "millivolt", 1.5)
-ext.convert_currency("USD", "EUR", 100)
 ```
 
 ## API
@@ -32,11 +31,7 @@ ext.convert_currency("USD", "EUR", 100)
 **Units** - 56 dimension-checked converters
 - `convert(quantity, from_unit, to_unit, amount)` - calls `convert_<quantity>`. Quantities: acceleration, amount_of_substance, angle, angular_velocity, area, capacitance, catalytic_activity, diffusion_coefficient, dynamic_viscosity, electric_charge, electric_current, electric_potential, electrical_conductance, electrical_resistance, electrical_resistivity, energy, force, frequency, heat_capacity, heat_flux_density, illuminance, inductance, information, information_rate, kinematic_viscosity, length, luminance, luminous_intensity, magnetic_flux, magnetic_flux_density, mass, mass_concentration, mass_density, mass_rate, molality, molar_concentration, molar_mass, molar_volume, moment_of_inertia, momentum, power, pressure, radioactivity, specific_heat_capacity, surface_tension, temperature, temperature_interval, thermal_conductance, thermal_conductivity, thermal_resistance, time, torque, velocity, volume, volume_rate, volumetric_heat_capacity
 
-**Currency** - ECB reference rates
-- `convert_currency(from, to, amount)`
-- `list_currencies()`
-
-**Account** (on both servers) - `get_account`, `list_api_keys`, `create_api_key`, `revoke_api_key`, `list_payments`, `settle_balance`, `submit_feature_request`, `submit_exit_feedback`
+**Account** (on both servers) - `get_account`, `list_api_keys`, `create_api_key`, `revoke_api_key`, `list_payments`, `settle_balance`, `submit_feature_request`, `submit_exit_feedback`, `delete_account`
 
 - `call(name, args)` - call any tool by name
 
@@ -55,6 +50,10 @@ agent_utils is two MCP servers on one account: **extensions** (this one) and **s
 ## Pricing
 
 1 credit = $0.00001. Trial: 1,000 credits, no card. Activation: $5 -> 500,000-credit limit. Terms: [mcp.agent-utils.ai/legal.txt](https://mcp.agent-utils.ai/legal.txt).
+
+## Contact
+
+Questions, bugs or account issues: support@agent-utils.ai
 
 ## License
 
