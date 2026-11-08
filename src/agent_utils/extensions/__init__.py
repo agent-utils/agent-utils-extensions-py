@@ -17,7 +17,7 @@ from typing import Any
 
 DEFAULT_ENDPOINT = "https://mcp.agent-utils.ai/extensions"
 STAGING_ENDPOINT = "https://mcp-staging.agent-utils.ai/extensions"
-USER_AGENT = "agent-utils-extensions-py/0.1.0"
+USER_AGENT = "agent-utils-extensions-py/0.1.1"
 
 __all__ = ["AgentUtilsExtensions", "DEFAULT_ENDPOINT", "STAGING_ENDPOINT"]
 
