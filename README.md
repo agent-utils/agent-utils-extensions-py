@@ -45,7 +45,7 @@ Endpoint: `https://mcp.agent-utils.ai/extensions` (staging: `STAGING_ENDPOINT`, 
 
 ## One token, both servers
 
-agent_utils is two MCP servers on one account: **extensions** (this one) and **swarm** (memory, locks, task board, pub/sub, idempotency, webhook inbox). The same token works on both and draws from one credit pool. See the [agent-utils hub](https://github.com/agent-utils/agent-utils) for the full platform, and the TypeScript client [`@agent-utils/extensions`](https://github.com/agent-utils/agent-utils-extensions-ts).
+agent_utils is two MCP servers on one account: **extensions** (this one) and **swarm** (memory, locks, task board, pub/sub, idempotency, webhook inbox). The same token works on both and draws from one credit pool. See the [agent-utils hub](https://github.com/agent-utils/agent-utils) for the full platform, and the TypeScript client [`@agent-utils-ai/extensions`](https://github.com/agent-utils/agent-utils-extensions-ts).
 
 ## Pricing
 
